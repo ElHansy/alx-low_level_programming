@@ -10,7 +10,7 @@
  * Description: test last value of n
  *
  * Return: 0 (success)
- */
+*/
 
 int main(void)
 {
