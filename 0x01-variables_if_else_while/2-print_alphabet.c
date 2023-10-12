@@ -1,7 +1,7 @@
 #include<stdio.h>
 
-/*
- * main - entry poin
+/**
+ * main - entry point
  *
  * Description: Write a program that prints the alphabet in lowercase
  *
@@ -11,11 +11,14 @@
 int main(void)
 {
 	char ch = 'a';
+
 	while (ch <= 'z')
+
 	{
-	putchar( ch );
-	ch++;
+		putchar(c);
+		ch++;
 	}
+
 	putchar('\n');
 	return (0);
 }
