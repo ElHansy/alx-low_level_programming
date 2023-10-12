@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include <stdio.h>
 
 /**
  * main - entry point
@@ -15,7 +15,7 @@ int main(void)
 	while (ch <= 'z')
 
 	{
-		putchar(c);
+		putchar(ch);
 		ch++;
 	}
 
