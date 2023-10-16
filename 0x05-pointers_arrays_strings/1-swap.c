@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * swap_int - 
+ * swap_int -
  * @a:input
  * @b:input
  * Return: 0
