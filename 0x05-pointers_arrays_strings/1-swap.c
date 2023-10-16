@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * swap_int -
+ * swap_int - swab vlues of two integers
  * @a:input
  * @b:input
  * Return: 0
