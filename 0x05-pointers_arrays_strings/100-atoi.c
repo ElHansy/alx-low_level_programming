@@ -1,18 +1,18 @@
 #include "main.h"
 
 /**
- * _atoi - converts a string to an integer
- *@s: string to be converted
+ * _atoi - converts a string to integer
+ *@s: string to be convert
  * Return: integers in a string
  */
 
 int _atoi(char *s)
 {
-	int num, len, numcount, mult, x, neg;
+	int num, len, num_count, mult, x, neg;
 
 	len = 0;
 	x = 0;
-	numcount = 0;
+	num_count = 0;
 	mult = 1;
 	neg = 1;
 	num = 0;
@@ -21,14 +21,14 @@ int _atoi(char *s)
 	{
 		if (s[len] >= '0' && s[len] <= '9')
 		{
-			numcount++;
+			num_count++;
 			if (!(s[len + 1] >= '0' && s[len + 1] <= '9'))
 				break;
 		}
 		len++;
 	}
 
-	for (; numcount > 1; numcount--)
+	for (; num_count > 1; num_count--)
 	{
 		mult *= 10;
 	}

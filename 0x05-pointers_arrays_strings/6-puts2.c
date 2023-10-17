@@ -2,9 +2,9 @@
 
 /**
  * puts2 - print every other characters
- * @str: argument
- * Descripton: return the required result
- * Return: return void
+ * @str: arg
+ * Descripton: return result
+ * Return: return 0
  */
 
 void puts2(char *str)
