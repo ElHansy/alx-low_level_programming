@@ -1,11 +1,15 @@
 #include "main.h"
 
+
 /**
  * puts2 - print every other characters
+ *
  * @str: arg
  * Descripton: return result
+ *
  * Return: return 0
  */
+
 
 void puts2(char *str)
 {

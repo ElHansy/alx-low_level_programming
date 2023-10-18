@@ -2,10 +2,13 @@
 
 /**
  * puts_half - print out half of the  string
+ *
  * @str: pointer argument
  * Description: returns the required result
+ *
  * Return: returns void
  */
+
 
 void puts_half(char *str)
 {

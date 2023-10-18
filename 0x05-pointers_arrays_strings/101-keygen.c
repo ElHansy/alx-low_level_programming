@@ -2,14 +2,17 @@
 #include <stdlib.h>
 #include <time.h>
 
+
 /**
  * main - random pswd generator
+ *
  * Return: always 0
  */
 
+
 int main(void)
 {
-	int i, m, k, z;
+	int i, m, e, z;
 	char c[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char p[58];
 
@@ -17,7 +20,7 @@ int main(void)
 
 	while (z != 2772)
 	{
-		i = k = z = 0;
+		i = e = z = 0;
 
 		while ((2772 - 122) > z)
 		{
@@ -27,16 +30,16 @@ int main(void)
 			i++;
 		}
 
-		while (c[k])
+		while (c[e])
 		{
-			if (c[k] == (2772 - z))
+			if (c[e] == (2772 - z))
 			{
-				p[i] = c[k];
-				z += c[k];
+				p[i] = c[e];
+				z += c[e];
 				i++;
 				break;
 			}
-			k++;
+			e++;
 		}
 	}
 

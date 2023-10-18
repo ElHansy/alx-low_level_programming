@@ -1,13 +1,16 @@
 #include "main.h"
 
+
 /**
  *_strcpy - update value
- *@dest: value to be evaluated
+ *
+ *@dst: value to be evaluated
  *@src: value to be evaluated
+ *
  *Return: Always 0
  */
 
-char *_strcpy(char *dest, char *src)
+char *_strcpy(char *dst, char *src)
 {
 	int l = 0;
 	int x = 0;
@@ -19,10 +22,10 @@ char *_strcpy(char *dest, char *src)
 
 	for (; x < l; x++)
 	{
-		dest[x] = src[x];
+		dst[x] = src[x];
 	}
 
-	dest[l] = '\0';
+	dst[l] = '\0';
 
-	return (dest);
+	return (dst);
 }
