@@ -44,7 +44,7 @@ int main(void)
 	}
 
 	p[i] = '\0';
-	printf("%s", p);
+	printf("%s\n", p);
 
 	return (0);
 }
