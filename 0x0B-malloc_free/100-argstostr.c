@@ -4,7 +4,7 @@
  * argstostr - Concatenate arguements
  * @ac: Number of arguements
  * @av: Pointer to string arguements
- * Return: new string 
+ * Return: new string
 **/
 
 char *argstostr(int ac, char **av)
