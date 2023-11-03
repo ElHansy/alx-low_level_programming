@@ -30,7 +30,7 @@ int isInteger(const char *s)
 
 int main(int argc, char const *argv[])
 {
-	int i = 0, coinUsed = 0, coin = 0;
+	int i = 0, coinBused = 0, coin = 0;
 	int coins[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
@@ -46,7 +46,7 @@ int main(int argc, char const *argv[])
 			if (i >= coins[coin])
 			{
 				i -= coins[coin];
-				coinUsed++;
+				coinBused++;
 			}
 			else
 			{
@@ -54,6 +54,6 @@ int main(int argc, char const *argv[])
 			}
 		}
 	}
-	printf("%i\n", coinUsed);
+	printf("%i\n", coinBused);
 	return (0);
 }
