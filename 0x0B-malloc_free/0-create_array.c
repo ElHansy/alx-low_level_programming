@@ -14,12 +14,10 @@ char *create_array(unsigned int size, char c)
 
 	if (size == 0 || P == 0)
 		return (NULL);
-	else
-	{
-		while (size--)
+	
+	while (size--)
 		{
 			P[size] = c;
 		}
-	}
 	return (P);
 }
