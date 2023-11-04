@@ -10,7 +10,7 @@
 
 int _isdigit(int c)
 {
-  return (c >= '0' && c <= '9');
+	return (c >= '0' && c <= '9');
 }
 
 /**
@@ -83,7 +83,7 @@ char *big_multiply(char *s1, char *s2)
  * main - multiply two big number strings
  * @argc: the count arguments
  * @argv: the argument values
- * Return: 0 
+ * Return: 0
  */
 
 int main(int argc, char **argv)
@@ -98,7 +98,7 @@ int main(int argc, char **argv)
 	r = big_multiply(argv[1], argv[2]);
 	c = 0;
 	a = 0;
-	
+
 	while (c < d)
 	{
 		if (r[c])
