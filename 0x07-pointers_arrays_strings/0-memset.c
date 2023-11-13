@@ -4,6 +4,7 @@
  * _memset - function that fills memory with a constant byte
  * @s: source string
  * @b: character to be paste in s by size n
+ * @n: size to be filled with b
  * Return: s
  */
 
