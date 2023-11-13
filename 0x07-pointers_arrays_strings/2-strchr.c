@@ -12,7 +12,6 @@ char *_strchr(char *s, char c)
 	int a = 0, b;
 
 	while (s[a])
-	/*size of string*/
 	{
 		a++;
 	}
@@ -20,8 +19,10 @@ char *_strchr(char *s, char c)
 	for (b = 0; b <= a; b++)
 	{
 		if (c == s[b])
+		{
 			s = s + b;
-		return (s);
+			return (s);
+		}
 	}
 	return ('\0');
 }
