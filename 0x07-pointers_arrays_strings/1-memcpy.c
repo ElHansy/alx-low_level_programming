@@ -4,17 +4,18 @@
  * _memcpy - function that copies memory area
  * @src: area source
  * @dest: area destination
- * @n: size to be copied from src
- * Return: dest
+ * @i: size to be copied from src
+ * Return: a after modify
 */
 
-char *_memcpy(char *dest, char *src, unsigned int n)
+char *_memcpy(char *dest, char *src, unsigned int i)
 {
-	unsigned int i;
+	unsigned int a, b = 0;
 
-	for (i = 0; i < n; i++)
+	for (a = 0; a < i; a++)
 	{
-		dest[i] = src[i];
+		dest[a] = src[b];
+		b++;
 	}
-	return (dest);
+	return (src);
 }
