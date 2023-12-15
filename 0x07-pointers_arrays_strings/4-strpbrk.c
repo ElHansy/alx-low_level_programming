@@ -2,17 +2,16 @@
 
 /**
  * _strpbrk - function locates the first occurrence in the string s
- * of any of the bytes in the string accept
- * @s: input string to be checked
- * @accept: source string to be searched for in s
- * return: pointer of matched byte in s
+ * @s: input string to be checked.
+ * @accept: source string to be searched for in s.
+ * Return: pointer of matched byte in s.
  */
 
 
 
 char *_strpbrk(char *s, char *accept)
 {
-	char *begining = accept;
+	char *beggining = accept;
 
 	while (*s)
 	{
@@ -24,7 +23,7 @@ char *_strpbrk(char *s, char *accept)
 			}
 			accept++;
 		}
-		accept = begining;
+		accept = beggining;
 		s++;
 	}
 	return (NULL);
