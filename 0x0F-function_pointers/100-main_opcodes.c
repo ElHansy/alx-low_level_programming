@@ -2,16 +2,17 @@
 #include <stdlib.h>
 
 /**
- * main - prints its own opcodes
+ * main - prints its this main opcodes
  * @argc: number of arguments
  * @argv: array of arguments
  *
  * Return: Always 0 (Success)
  */
+
 int main(int argc, char *argv[])
 {
-	int bytes, i;
-	char *arr;
+	int byt, i;
+	char *ptr;
 
 	if (argc != 2)
 	{
@@ -19,24 +20,24 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	bytes = atoi(argv[1]);
+	byt = atoi(argv[1]);
 
-	if (bytes < 0)
+	if (byt < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
 
-	arr = (char *)main;
+	ptr = (char *)main;
 
-	for (i = 0; i < bytes; i++)
+	for (i = 0; i < byt; i++)
 	{
-		if (i == bytes - 1)
+		if (i == byt - 1)
 		{
-			printf("%02hhx\n", arr[i]);
+			printf("%02hhx\n", ptr[i]);
 			break;
 		}
-		printf("%02hhx ", arr[i]);
+		printf("%02hhx ", ptr[i]);
 	}
 	return (0);
 }
