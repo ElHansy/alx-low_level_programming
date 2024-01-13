@@ -10,14 +10,20 @@
 
 int main(int argc, char *argv[])
 {
-	if (argc <= 2)
+	int i, j;
+
+	if (argc > 3 || argc == 1)
 	{
 		printf("%s\n", "Error");
 		return (1);
 	}
-	else
+
+	for (i = 1; i < argc; i++)
 	{
-		printf("%i\n", (atoi(argv[argc - 1])) * (atoi(argv[argc - 2])));
+		for (j = i+1; j < argc; j++)
+		{
+			printf("%i\n", (atoi(argv[i])) * (atoi(argv[j])));
+		}
 	}
 	return (0);
 }
