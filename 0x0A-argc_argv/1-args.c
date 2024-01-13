@@ -1,16 +1,16 @@
 #include <stdio.h>
 
 /**
-* main -  Prints number of arguements
-* @argc: arguements count
+* main -  Prints number of arguments
+* @argc: arguments count
 * @argv: arguments string values
 * Return: 0
 **/
 
 int main(int argc, char *argv[])
 {
-	*argv = *argv;
+	(void)argv;
 
-	printf("%d\n", argc - 1);
-	return (0);
+	printf("argc = %d\n", argc);
+	return(0);
 }
