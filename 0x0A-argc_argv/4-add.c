@@ -22,6 +22,8 @@ int isInteger(const char *s)
 
 /**
  * main - adds positive numbers
+ * ////acc to isInteger if return 1 false (not valid int)//
+ * ////0 is true (valid int) now need to use atoi//
  * @argc: counts
  * @argv: values
  * Return: 0
