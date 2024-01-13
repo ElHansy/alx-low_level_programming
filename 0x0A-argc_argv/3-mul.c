@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		for (j = i+1; j < argc; j++)
+		for (j = i + 1; j < argc; j++)
 		{
 			printf("%i\n", (atoi(argv[i])) * (atoi(argv[j])));
 		}
