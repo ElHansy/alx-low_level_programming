@@ -2,12 +2,14 @@
 #include <stdlib.h>
 
 /**
- * isInteger - checks if s is an integer
+ * IsNotInteger - checks if s is an integer
+ * ////acc to isInteger if return 1 (failed) false (not valid int)//
+ * ////0 is true (success) (valid int) now need to use atoi//
  * @s: string input
- * Return: 0 or 1
+ * Return: 0 valid or 1 not valid
 */
 
-int isInteger(const char *s)
+int IsNotInteger(const char *s)
 {
 	int i = 0;
 
@@ -22,11 +24,11 @@ int isInteger(const char *s)
 
 /**
  * main - adds positive numbers
- * ////acc to isInteger if return 1 false (not valid int)//
- * ////0 is true (valid int) now need to use atoi//
+ * ////in if statment if the output is 0 mean false now need to use atoi//
+ * ////any value not 0 is true (general if statment rules)//
  * @argc: counts
  * @argv: values
- * Return: 0
+ * Return: 0 success 1 failure
 */
 
 int main(int argc, char const *argv[])
@@ -36,7 +38,7 @@ int main(int argc, char const *argv[])
 	while (--argc)
 
 	{
-		if (isInteger(argv[argc]))
+		if (IsNotInteger(argv[argc]))
 		{
 			printf("Error\n");
 			return (1);
