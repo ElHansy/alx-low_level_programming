@@ -30,7 +30,7 @@ int isInteger(const char *s)
 
 int main(int argc, char const *argv[])
 {
-	int i = 0, coinBused = 0, coin = 0;
+	int change, XcoinBused = 0, i = 0;
 	int coins[] = {25, 10, 5, 2, 1};
 
 	if (argc != 2)
@@ -40,20 +40,20 @@ int main(int argc, char const *argv[])
 	}
 	if (isInteger(argv[1]))
 	{
-		i = atoi(argv[1]);
-		while (i > 0 && coin <= 4)
+		change = atoi(argv[1]);
+		while (change > 0 && i <= 4)
 		{
-			if (i >= coins[coin])
+			if (change >= coins[i])
 			{
-				i -= coins[coin];
-				coinBused++;
+				change -= coins[i];
+				XcoinBused++;
 			}
 			else
 			{
-				coin++;
+				i++;
 			}
 		}
 	}
-	printf("%i\n", coinBused);
+	printf("%i\n", XcoinBused);
 	return (0);
 }
