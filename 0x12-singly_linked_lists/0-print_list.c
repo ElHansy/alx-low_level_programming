@@ -20,18 +20,18 @@ int STRlen(char *s)
 /**
  * print_list - prints a linked lists
  * @h: pointer to first node
- *
  * Return: size of list
  */
+
 size_t print_list(const list_t *h)
 {
-	size_t i = 0;
+	size_t b = 0;
 
 	while (h)
 	{
 		printf("[%d] %s\n", STRlen(h->str), h->str ? h->str : "(nil)");
 		h = h->next;
-		i++;
+		b++;
 	}
-	return (i);
+	return (b);
 }
