@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -6,7 +7,7 @@
  * Return: integer length of string
  */
 
-int STRlen(char *s)
+int STRlen(const char *s)
 {
 	int a = 0;
 
