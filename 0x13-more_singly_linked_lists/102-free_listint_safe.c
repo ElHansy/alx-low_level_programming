@@ -2,38 +2,38 @@
 #include <stdlib.h>
 
 /**
- * find_listint_loop_fl - finds loop in linked list
- * @head: requested linked list
- * Return: address of node where loop starts, NULL if no loop
+ * find_listint_loop_fl - find loop in linked list
+ * @head: linked list pointer
+ * Return: address of node if loop present, NULL if no loop
  */
 
 listint_t *find_listint_loop_fl(listint_t *head)
 {
-	listint_t *pt, *end;
+	listint_t *p, *last;
 
 	if (head == NULL)
 		return (NULL);
 
-	for (end = head->next; end != NULL; end = end->next)
+	for (last = head->next; last != NULL; last = last->next)
 	{
-		if (end == end->next)
-			return (end);
-		for (pt = head; pt != end; pt = pt->next)
-			if (pt == end->next)
-				return (end->next);
+		if (last == last->next)
+			return (last);
+		for (p = head; p != last; p = p->next)
+			if (p == last->next)
+				return (last->next);
 	}
 	return (NULL);
 }
 
 /**
- * free_listint_safe - free listint list, even loop
- * @h: head of list pointer
- * Return: number of nodes now free
+ * free_listint_safe - frees a listint list, even if it has a loop
+ * @h: head of list
+ * Return: number of nodes freed
  */
 
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *nxt, *loop_node;
+	listint_t *next, *loop_node;
 	size_t ln;
 	int loop = 1;
 
@@ -41,10 +41,10 @@ size_t free_listint_safe(listint_t **h)
 		return (0);
 
 	loop_node = find_listint_loop_fl(*h);
-	for (ln = 0; (*h != loop_node || loop) && *h != NULL; *h = nxt)
+	for (ln = 0; (*h != loop_node || loop) && *h != NULL; *h = next)
 	{
 		ln++;
-		nxt = (*h)->next;
+		next = (*h)->next;
 		if (*h == loop_node && loop)
 		{
 			if (loop_node == loop_node->next)
@@ -53,7 +53,7 @@ size_t free_listint_safe(listint_t **h)
 				break;
 			}
 			ln++;
-			nxt = next->next;
+			next = next->next;
 			free((*h)->next);
 			loop = 0;
 		}
